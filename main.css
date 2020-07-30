@@ -6,8 +6,14 @@ h1{
     margin: 0;
 }
 
+div.centem{
+    text-align: center;
+}
+
 div.boxx{
     border: 3px inset gray;
+    width: 70vw;
+    margin: auto;
 }
 
 canvas#maine{
