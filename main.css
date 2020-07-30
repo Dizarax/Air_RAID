@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+    font-size: 3em;
+    font-family: sans-serif;
+    padding: 10px 0;
+    margin: 0;
+}
+
+div.boxx{
+    border: 3px inset gray;
+}
+
+canvas#maine{
+    width: 70vw;
+}
