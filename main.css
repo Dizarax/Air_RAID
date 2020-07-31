@@ -43,7 +43,7 @@ canvas#maine{
 
 #time{
     width: calc(12vw - 10px);
-    height: 4vw;
+    height: 6vw;
     background-color: #f5d193;
     position: relative;
     color: #7d4f00;
@@ -52,11 +52,15 @@ canvas#maine{
     line-height: 4vw;
 }
 
+.timeuntil{
+    width: 10vw;
+}
+
 div.vict{
     font-family: monospace;
     background-color: #d6b57a;
     font-size: 1.0vw;
-    height: calc(40vw - 8vw);
+    height: calc(40vw - 10vw);
     padding-top: 4vw;
 }
 
@@ -276,4 +280,55 @@ div.mode-select{
 .dire-selected{
     border: 1px solid red;
     color: crimson;
+}
+
+/* intro screen */
+#intro{
+    width: 64vw;
+    height: 30vw;
+    position: absolute;
+    
+    top: 5vw;
+    left: 4vw;
+    
+    background-color: #e0bf84;
+    border: 3px inset #9c6e1c;
+    font-family: monospace;
+}
+
+#startgame{
+    position: relative;
+    top: 26vw;
+    
+    width: 12vw;
+    height: 2.4vw;
+    font-size: 1.6vw;
+    font-family: monospace;
+    
+    border: 3px solid #694e1d;
+    background-color: #0000;
+    color: #694e1d;
+    
+    transition: 0.6s ease;
+}
+
+#startgame:hover{
+    background-color: #694e1d;
+    color: white;
+}
+
+#startgame:active{
+    background-color: #9c7a3d;
+}
+
+.explain{
+    font-size: 1.1vw;
+}
+
+.inl{
+    height: 1vw;
+}
+
+.hiden{
+    display: none;
 }

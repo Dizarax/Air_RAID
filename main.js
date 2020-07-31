@@ -28,6 +28,8 @@ function setup(){
     for (var i = 0; i < produce_btns.length; i++){
         produce_btns[i].addEventListener("click", produceOnClick);
     }
+    
+    document.getElementById("startgame").addEventListener("click", startgame);
 }
 
 function startgame(){
@@ -46,6 +48,9 @@ function startgame(){
     
     document.getElementById("factory-countdown").innerHTML = "";
     
+    //remove block
+    document.getElementById("intro").classList.add("hiden");
+    //start the update loop
     clearInterval(gameUpdateLoopInterval);
     gameUpdateLoopInterval = setInterval(gametick, 1000 / tick_per_second);
 }
@@ -154,6 +159,23 @@ function renderWarehouses(){
 //ending the game
 function gameEnd(){
     
+}
+
+//check if items match in two list (order doesn't matter)
+function checkItemsMatch(lis1, lis2){
+    if (lis1.length !== lis2.length){
+        return false;
+    }
+    
+    var match = true;
+    var a1 = [...lis1].sort();
+    var a2 = [...lis2].sort();
+    
+    for (var i = 0; i < a1.length; i++){
+        match = match && (a1[i] === a2[i]);
+    }
+    
+    return match;
 }
 
 //when a directive is selected
