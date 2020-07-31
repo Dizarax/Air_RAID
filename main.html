@@ -11,11 +11,101 @@
             <img src="Sprites/food_Crate.png" id="img-food">
             <img src="Sprites/health_Crate.png" id="img-heal">
             <img src="Sprites/rifle_Crate.png" id="img-guns">
+            <img src="Sprites/factory.png" id="img-factory">
         </div>
         <h1>AirRAID</h1>
         <div class="centem">
             <div class="boxx">
                 <canvas width="1280" height="720" id="maine"></canvas>
+                <!-- the left bar -->
+                <div class="left-bar absolut">
+                    <div id="time">Time left: 68</div>
+                </div>
+                
+                <!-- the factory -->
+                <div class="absolut factori"></div>
+                <table class="absolut queue-tbl" id="factori-q">
+                    <tr>
+                        <td class="queue-itm"></td>
+                        <td class="queue-itm"></td>
+                        <td class="queue-itm"></td>
+                        <td class="queue-itm"></td>
+                    </tr>
+                </table>
+                <!-- the warehouses -->
+                <div class="absolut wh wh1">warehouse1</div>
+                <table class="absolut queue-tbl" id="wh1-q">
+                    <tr>
+                        <td class="queue-itm"></td>
+                    </tr>
+                    <tr>
+                        <td class="queue-itm"></td>
+                    </tr>
+                    <tr>
+                        <td class="queue-itm"></td>
+                    </tr>
+                    <tr>
+                        <td class="queue-itm"></td>
+                    </tr>
+                </table>
+                <div class="absolut wh wh2">warehouse2</div>
+                <table class="absolut queue-tbl" id="wh2-q">
+                    <tr>
+                        <td class="queue-itm"></td>
+                    </tr>
+                    <tr>
+                        <td class="queue-itm"></td>
+                    </tr>
+                    <tr>
+                        <td class="queue-itm"></td>
+                    </tr>
+                    <tr>
+                        <td class="queue-itm"></td>
+                    </tr>
+                </table>
+                
+                <!-- the top right section showing amount of material -->
+                <div id="top-right" class="absolut">
+                    <div class="resources">
+                        <div class="material-sprite mat0"></div>
+                        <div class="material-sprite mat1"></div>
+                        <div class="material-sprite mat2"></div>
+                        <div class="clearer"></div>
+                        <div class="countr">69</div>
+                        <div class="countr">420</div>
+                        <div class="countr">1337</div>
+                    </div>
+                    <div class="estima">
+                        <div class="bigbox">
+                            <div class="boxe b-rifl"></div>
+                            <div class="boxe-desc">
+                                Mat:30 Chem:10<br>
+                                35H
+                            </div>
+                        </div>
+                        <div class="bigbox">
+                            <div class="boxe b-ammo"></div>
+                            <div class="boxe-desc">
+                                Mat:5 Chem:5<br>
+                                10H
+                            </div>
+                        </div>
+                        <div class="bigbox">
+                            <div class="boxe b-food"></div>
+                            <div class="boxe-desc">
+                                Mat:5 Bio:10<br>
+                                10H
+                            </div>
+                        </div>
+                        <div class="bigbox">
+                            <div class="boxe b-heal"></div>
+                            <div class="boxe-desc">
+                                Mat:5 Chem:15<br>
+                                15H
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

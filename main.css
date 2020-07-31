@@ -12,10 +12,170 @@ div.centem{
 
 div.boxx{
     border: 3px inset gray;
-    width: 70vw;
+    width: 72vw;
     margin: auto;
+    position: relative;
 }
 
 canvas#maine{
-    width: 70vw;
+    width: 72vw;
+}
+
+.absolut{
+    position: absolute;
+}
+
+/* the left bar */
+.left-bar{
+    height: 40vw;
+    width: calc(12vw - 10px);
+    top: 0;
+    border: 5px outset brown;
+}
+
+#time{
+    width: calc(12vw - 10px);
+    height: 4vw;
+    background-color: #f5d193;
+    position: relative;
+    color: #7d4f00;
+    font-family: monospace;
+    font-size: 1.4vw;
+    line-height: 4vw;
+}
+
+/* the factory */
+.factori{
+    background-image: url(Sprites/factory.png);
+    width: 8vw;
+    height: 8vw;
+    left: calc(70vw / 2 - 8vw);
+    top: calc(40.5vw / 2 - 4vw);
+    background-size: contain;
+}
+
+#factori-q{
+    left: calc(70vw / 2 + 0vw);
+    top: calc(40.5vw / 2 - 1vw);
+}
+
+/* the queue items */
+.queue-tbl{
+    
+}
+
+.queue-itm{
+    width: 2.5vw;
+    height: 2.5vw;
+    border: 2px solid brown;
+}
+
+/* the warehouse */
+.wh{
+    background-color: black;
+    color: white;
+    width: 5vw;
+    height: 5vw;
+    top: 29vw;
+}
+
+.wh1{
+    left: 20vw;
+}
+.wh2{
+    left: 40vw;
+}
+
+#wh1-q{
+    left: 25.5vw;
+    top: 29vw;
+}
+#wh2-q{
+    left: 45.5vw;
+    top: 29vw;
+}
+
+/* the top right */
+#top-right{
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.resources{
+    float: right;
+    
+    padding: 0;
+    margin: 0;
+    background-color: #debf8a;
+}
+
+.material-sprite{
+    float: left;
+    width: 8vw;
+    height: 5.25vw;
+    background-size: cover;
+    background-position: center;
+}
+
+.mat0{
+    background-image: url(Sprites/sprite_0.png);
+}
+.mat1{
+    background-image: url(Sprites/sprite_1.png);
+}
+.mat2{
+    background-image: url(Sprites/sprite_2.png);
+}
+
+.clearer{
+    clear: both;
+}
+
+div.countr{
+    font-family: monospace;
+    font-size: 1.8vw;
+    width: 8vw;
+    height: 3.75vw;
+    float: left;
+}
+
+.estima{
+    float: right;
+}
+
+.bigbox{
+    width: 9vw;
+    height: 8vw;
+    float: left;
+    text-align: center;
+    padding-top: 1vw;
+    background-color: #debf8a;
+}
+
+.boxe{
+    width: 3vw;
+    height: 3vw;
+    position: relative;
+    left: calc(50% - 1.5vw);
+    background-size: cover;
+}
+
+.b-rifl{
+    background-image: url("Sprites (UPDATED)/rifle_Crate.png");
+}
+.b-ammo{
+    background-image: url("Sprites (UPDATED)/ammo_Crate.png");
+}
+.b-food{
+    background-image: url("Sprites (UPDATED)/food_Crate.png");
+}
+.b-heal{
+    background-image: url("Sprites%20(UPDATED)/health_Crate.png");
+}
+
+.boxe-desc{
+    font-family: monospace;
+    font-size: 0.9vw;
 }
