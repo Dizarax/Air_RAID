@@ -4,7 +4,7 @@ var current_chemical = 0;
 
 var current_directive = "rd0";
 
-const game_length_in_seconds = 125;
+const game_length_in_seconds = 145;
 const tick_per_second = 40;
 const game_length_in_ticks = game_length_in_seconds * tick_per_second;
 var current_game_tick_count = 0;
@@ -30,6 +30,10 @@ function setup(){
     }
     
     document.getElementById("startgame").addEventListener("click", startgame);
+    var playagain = document.getElementsByClassName("playagain");
+    for(var ct=0; ct<playagain.length; ct++){
+        playagain[ct].addEventListener("click", startgame);
+    }
 }
 
 function startgame(){
@@ -50,6 +54,13 @@ function startgame(){
     
     //remove block
     document.getElementById("intro").classList.add("hiden");
+    var bl = document.getElementsByClassName("blokk");
+    for(var ct=0; ct<bl.length; ct++){
+        bl[ct].classList.add("hiden");
+    }
+    //reset the warehouses
+    document.getElementsByClassName("wh1")[0].style.backgroundImage = 'url("Sprites (UPDATED)/warehouseOne.png")';
+    document.getElementsByClassName("wh2")[0].style.backgroundImage = 'url("Sprites (UPDATED)/warehouseTwo.png")';
     //start the update loop
     clearInterval(gameUpdateLoopInterval);
     gameUpdateLoopInterval = setInterval(gametick, 1000 / tick_per_second);
@@ -158,7 +169,29 @@ function renderWarehouses(){
 
 //ending the game
 function gameEnd(){
+    clearInterval(gameUpdateLoopInterval);
     
+    var ramd = Math.random();
+    var safe;
+    if (ramd >= 0.5){//destroy warehouse 1
+        safe = warehouse_2_items;
+        document.getElementsByClassName("wh1")[0].style.backgroundImage = 'url("Sprites (UPDATED)/warehouseDestroyed.png")';
+    } else {//destroy warehouse 2
+        safe = warehouse_1_items;
+        document.getElementsByClassName("wh2")[0].style.backgroundImage = 'url("Sprites (UPDATED)/warehouseDestroyed.png")';
+    }
+    
+    //if the item in the safe warehouse match, player wins
+    if (checkItemsMatch(safe, ["rifl", "ammo", "rifl", "medi"]) || checkItemsMatch(safe, ["rifl", "food", "rifl", "medi"])){
+        setTimeout(cueEndScreen, 1000, "victori");
+    } else {
+        setTimeout(cueEndScreen, 1000, "failure");
+    }
+}
+
+//cue a end screen after a delay
+function cueEndScreen(sta){
+    document.getElementsByClassName(sta)[0].classList.remove("hiden");
 }
 
 //check if items match in two list (order doesn't matter)

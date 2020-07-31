@@ -13,7 +13,7 @@
                 <canvas width="1280" height="720" id="maine"></canvas>
                 <!-- the left bar -->
                 <div class="left-bar absolut">
-                    <div id="time"><img src="Sprites/New_Piskel_6.png" class="timeuntil"><span id="timeleft">68</span></div>
+                    <div id="time"><img src="Sprites/New_Piskel_6.png" class="timeuntil"><br><span id="timeleft">68</span></div>
                     <div class="vict">
                         Victory condition:<br><br>
                         After the air raid, one warehouse contains<br>
@@ -97,32 +97,32 @@
                         <div class="bigbox">
                             <div class="boxe b-rifl"></div>
                             <div class="boxe-desc">
-                                Mat:15 Chem:5<br>
-                                20H
+                                Mat:15(30) Chem:5(10)<br>
+                                20H (45H)
                             </div>
                             <button class="produce" id="prod-rifl"></button>
                         </div>
                         <div class="bigbox">
                             <div class="boxe b-ammo"></div>
                             <div class="boxe-desc">
-                                Mat:5 Chem:5<br>
-                                10H
+                                Mat:5(10) Chem:5(10)<br>
+                                10H (22.5H)
                             </div>
                             <button class="produce" id="prod-ammo"></button>
                         </div>
                         <div class="bigbox">
                             <div class="boxe b-food"></div>
                             <div class="boxe-desc">
-                                Mat:5 Bio:10<br>
-                                10H
+                                Mat:5(10) Bio:10(20)<br>
+                                10H (22.5H)
                             </div>
                             <button class="produce" id="prod-food"></button>
                         </div>
                         <div class="bigbox">
                             <div class="boxe b-medi"></div>
                             <div class="boxe-desc">
-                                Mat:5 Chem:15<br>
-                                15H
+                                Mat:5(10) Chem:15(30)<br>
+                                15H (33.75H)
                             </div>
                             <button class="produce" id="prod-medi"></button>
                         </div>
@@ -155,9 +155,18 @@
                         <br>
                         Produce supply for the battlefield before the enemy's air raid strike us!<br><br>
                         You start with a specific amount of material, food, and chemical resources.<br>
-                        Select directive 1 or 0 to and click <img src="Sprites/produce.png" class="inl"> to start queueing the factory to produce the equipments.<br>
-                        When the timer ends one warehouse will be destroyed by enemy's air strike. If by then the safe warehouse contains the correct amount of equipment, you win the game.
+                        Select directive 1 or 0 to and click <img src="Sprites/produce.png" class="inl"> to start queueing the factory to produce the equipment.<br>
+                        When the timer ends one warehouse will be destroyed by enemy's air strike. If by then the safe warehouse contains the correct amount of equipments, you win the game.
                     </div>
+                </div>
+                
+                <div class="victori hiden blokk">
+                    Victory!<br>
+                    <button class="playagain">Play again</button>
+                </div>
+                <div class="failure hiden blokk">
+                    Failure...<br>
+                    <button class="playagain">Play again</button>
                 </div>
             </div>
         </div>

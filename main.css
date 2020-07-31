@@ -113,6 +113,8 @@ div.totot{
 .queue-dir{
     color: crimson;
     text-align: center;
+    font-family: monospace;
+    font-size: 1.0vw;
 }
 
 /* the warehouse */
@@ -224,7 +226,7 @@ div.countr{
 
 .boxe-desc{
     font-family: monospace;
-    font-size: 0.9vw;
+    font-size: 0.75vw;
 }
 
 .produce{
@@ -331,4 +333,42 @@ div.mode-select{
 
 .hiden{
     display: none;
+}
+
+/* victory screen */
+.victori, .failure{
+    width: 64vw;
+    height: 30vw;
+    position: absolute;
+    
+    top: 5vw;
+    left: 4vw; 
+    
+    background-color: #e0bf84;
+    border: 3px inset #9c6e1c;
+    font-family: monospace;
+    
+    font-size: 4vw;
+    color: #9c6e1c;
+    ;line-height: 15vw;
+}
+
+.playagain{
+    width: 12vw;
+    height: 2.4vw;
+    font-size: 1.6vw;
+    font-family: monospace;
+    
+    border: 3px solid #694e1d;
+    background-color: #0000;
+    color: #694e1d;
+    
+    transition: 0.6s ease;
+}
+.playagain:hover{
+    background-color: #694e1d;
+    color: white;
+}
+.playagain:active{
+    background-color: #9c7a3d;
 }
