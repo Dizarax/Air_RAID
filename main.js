@@ -4,7 +4,7 @@ var current_chemical = 0;
 
 var current_directive = "rd0";
 
-const game_length_in_seconds = 145;
+const game_length_in_seconds = 155;
 const tick_per_second = 40;
 const game_length_in_ticks = game_length_in_seconds * tick_per_second;
 var current_game_tick_count = 0;
