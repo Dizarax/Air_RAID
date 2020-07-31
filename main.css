@@ -337,12 +337,12 @@ div.mode-select{
 
 /* victory screen */
 .victori, .failure{
-    width: 64vw;
-    height: 30vw;
+    width: 48vw;
+    height: 24vw;
     position: absolute;
     
     top: 5vw;
-    left: 4vw; 
+    left: 12vw; 
     
     background-color: #e0bf84;
     border: 3px inset #9c6e1c;
@@ -350,7 +350,7 @@ div.mode-select{
     
     font-size: 4vw;
     color: #9c6e1c;
-    ;line-height: 15vw;
+    ;line-height: 12vw;
 }
 
 .playagain{
