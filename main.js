@@ -49,6 +49,7 @@ function startgame(){
     warehouse_2_items = [];
     update_factory_queue();
     renderWarehouses();
+    sirenplayed = false;
     
     document.getElementById("factory-countdown").innerHTML = "";
     
@@ -140,6 +141,18 @@ function gametick(){
     if (current_game_tick_count >= game_length_in_ticks){
         gameEnd();
     }
+    
+    //play siren at last 10 seconds
+    if (game_length_in_seconds - current_game_tick_count / tick_per_second <= 10 && sirenplayed === false){
+        playSiren();
+        sirenplayed = true;
+    }
+}
+
+var sirenplayed = false;
+function playSiren(){
+    var audio = new Audio('siren.mp3');
+    audio.play();
 }
 
 //update the graphics for the warehouse when they're changed
@@ -171,6 +184,9 @@ function renderWarehouses(){
 function gameEnd(){
     clearInterval(gameUpdateLoopInterval);
     
+    var audio = new Audio('Explosion+3.mp3');
+    audio.play();
+    
     var ramd = Math.random();
     var safe;
     if (ramd >= 0.5){//destroy warehouse 1
@@ -183,9 +199,9 @@ function gameEnd(){
     
     //if the item in the safe warehouse match, player wins
     if (checkItemsMatch(safe, ["rifl", "ammo", "rifl", "medi"]) || checkItemsMatch(safe, ["rifl", "food", "rifl", "medi"])){
-        setTimeout(cueEndScreen, 1000, "victori");
+        setTimeout(cueEndScreen, 1500, "victori");
     } else {
-        setTimeout(cueEndScreen, 1000, "failure");
+        setTimeout(cueEndScreen, 1500, "failure");
     }
 }
 
