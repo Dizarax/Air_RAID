@@ -121,7 +121,7 @@ function gametick(){
                 addtime = production_time_in_seconds[next_item] * tick_per_second * 0.4;
             }
             
-            var multiplier = (current_directive === "rd1") ? 2.25 : 1;
+            var multiplier = (factory_queue[0].directive === "rd1") ? 2.25 : 1;
             time_left_for_cur_item = production_time_in_seconds[next_item] * tick_per_second * multiplier + addtime;
         } else {
             document.getElementById("factory-countdown").innerHTML = "";
