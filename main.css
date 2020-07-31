@@ -6,6 +6,12 @@ h1{
     margin: 0;
 }
 
+#tiol{
+    width: 15vw;
+    margin: auto;
+    display: block;
+}
+
 div.centem{
     text-align: center;
 }
@@ -80,15 +86,29 @@ div.totot{
     top: calc(40.5vw / 2 - 6vw);
 }
 
+#factory-countdown{
+    position: absolute;
+    top: 19.25vw;
+    left: 35vw;
+    font-family: monospace;
+    font-size: 1.8vw;
+}
+
 /* the queue items */
 .queue-tbl{
     
 }
 
 .queue-itm{
-    width: 2.5vw;
-    height: 2.5vw;
+    width: calc(2.6vw - 7px);
+    height: 2.6vw;
     border: 2px solid brown;
+    background-size: contain;
+}
+
+.queue-dir{
+    color: crimson;
+    text-align: center;
 }
 
 /* the warehouse */
@@ -194,7 +214,7 @@ div.countr{
 .b-food{
     background-image: url("Sprites (UPDATED)/food_Crate.png");
 }
-.b-heal{
+.b-medi{
     background-image: url("Sprites (UPDATED)/health_Crate.png");
 }
 
@@ -205,10 +225,16 @@ div.countr{
 
 .produce{
     background-color: #0000;
+    background-image: url(Sprites/produce.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     border: 2px solid #805b1c;
     color: #422d08;
     font-size: 1.05vw;
     font-family: monospace;
+    width: 6vw;
+    height: 2vw;
     
     transition: 0.4s ease;
 }
@@ -235,7 +261,7 @@ div.mode-select{
 
 #rd0, #rd1{
     float: left;
-    width: 7.5vw;
+    width: calc(7.5vw - 3px);
     margin: 0.5vw 0.75vw 0;
     font-size: 1.2vw;
 }
@@ -245,4 +271,9 @@ div.mode-select{
     width: 7.5vw;
     margin: 0 0.75vw;
     font-size: 0.85vw;
+}
+
+.dire-selected{
+    border: 1px solid red;
+    color: crimson;
 }

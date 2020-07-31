@@ -6,14 +6,8 @@
     </head>
     <body>
         <div hidden=hidden>
-            <!-- image sprites -->
-            <img src="Sprites/ammo_Crate.png" id="img-ammo">
-            <img src="Sprites/food_Crate.png" id="img-food">
-            <img src="Sprites/health_Crate.png" id="img-heal">
-            <img src="Sprites/rifle_Crate.png" id="img-guns">
-            <img src="Sprites/factory.png" id="img-factory">
         </div>
-        <h1>AirRAID</h1>
+        <img src="Sprites/airRaidLogo.png" id="tiol">
         <div class="centem">
             <div class="boxx">
                 <canvas width="1280" height="720" id="maine"></canvas>
@@ -27,14 +21,14 @@
                             <div class="boxe b-rifl"></div>
                             <div class="boxe b-ammo"></div>
                             <div class="boxe b-rifl"></div>
-                            <div class="boxe b-heal"></div>
+                            <div class="boxe b-medi"></div>
                         </div>
                         <div class="totot">or</div>
                         <div class="toto">
                             <div class="boxe b-rifl"></div>
                             <div class="boxe b-food"></div>
                             <div class="boxe b-rifl"></div>
-                            <div class="boxe b-heal"></div>
+                            <div class="boxe b-medi"></div>
                         </div>
                     </div>
                 </div>
@@ -48,7 +42,14 @@
                         <td class="queue-itm"></td>
                         <td class="queue-itm"></td>
                     </tr>
+                    <tr>
+                        <td class="queue-dir"></td>
+                        <td class="queue-dir"></td>
+                        <td class="queue-dir"></td>
+                        <td class="queue-dir"></td>
+                    </tr>
                 </table>
+                <div id="factory-countdown"></div>
                 <!-- the warehouses -->
                 <div class="absolut wh wh1"></div>
                 <table class="absolut queue-tbl" id="wh1-q">
@@ -88,9 +89,9 @@
                         <div class="material-sprite mat1"></div>
                         <div class="material-sprite mat2"></div>
                         <div class="clearer"></div>
-                        <div class="countr">69</div>
-                        <div class="countr">420</div>
-                        <div class="countr">1337</div>
+                        <div class="countr" id="contr-mat">69</div>
+                        <div class="countr" id="contr-food">420</div>
+                        <div class="countr" id="contr-chem">1337</div>
                     </div>
                     <div class="estima">
                         <div class="bigbox">
@@ -99,7 +100,7 @@
                                 Mat:15 Chem:5<br>
                                 20H
                             </div>
-                            <button class="produce" id="prod-rifl">produce</button>
+                            <button class="produce" id="prod-rifl"></button>
                         </div>
                         <div class="bigbox">
                             <div class="boxe b-ammo"></div>
@@ -107,7 +108,7 @@
                                 Mat:5 Chem:5<br>
                                 10H
                             </div>
-                            <button class="produce" id="prod-ammo">produce</button>
+                            <button class="produce" id="prod-ammo"></button>
                         </div>
                         <div class="bigbox">
                             <div class="boxe b-food"></div>
@@ -115,21 +116,21 @@
                                 Mat:5 Bio:10<br>
                                 10H
                             </div>
-                            <button class="produce" id="prod-food">produce</button>
+                            <button class="produce" id="prod-food"></button>
                         </div>
                         <div class="bigbox">
-                            <div class="boxe b-heal"></div>
+                            <div class="boxe b-medi"></div>
                             <div class="boxe-desc">
                                 Mat:5 Chem:15<br>
                                 15H
                             </div>
-                            <button class="produce" id="prod-heal">produce</button>
+                            <button class="produce" id="prod-medi"></button>
                         </div>
                     </div>
                     <!-- the selection between rd0 and rd1 -->
                     <div class="mode-select absolut">
                         Production mode:<br>
-                        <div id="rd0">Directive 0</div>
+                        <div id="rd0" class="dire-selected">Directive 0</div>
                         <div id="rd1">Directive 1</div>
                         <div class="clearer"></div>
                         <div class="rd-desc">
