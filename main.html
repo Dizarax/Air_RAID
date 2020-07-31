@@ -19,7 +19,24 @@
                 <canvas width="1280" height="720" id="maine"></canvas>
                 <!-- the left bar -->
                 <div class="left-bar absolut">
-                    <div id="time">Time left: 68</div>
+                    <div id="time">Time left: <span id="timeleft">68</span></div>
+                    <div class="vict">
+                        Victory condition:<br><br>
+                        After the air raid, one factory contains<br>
+                        <div class="toto">
+                            <div class="boxe b-rifl"></div>
+                            <div class="boxe b-ammo"></div>
+                            <div class="boxe b-rifl"></div>
+                            <div class="boxe b-heal"></div>
+                        </div>
+                        <div class="totot">or</div>
+                        <div class="toto">
+                            <div class="boxe b-rifl"></div>
+                            <div class="boxe b-food"></div>
+                            <div class="boxe b-rifl"></div>
+                            <div class="boxe b-heal"></div>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- the factory -->
@@ -33,7 +50,7 @@
                     </tr>
                 </table>
                 <!-- the warehouses -->
-                <div class="absolut wh wh1">warehouse1</div>
+                <div class="absolut wh wh1"></div>
                 <table class="absolut queue-tbl" id="wh1-q">
                     <tr>
                         <td class="queue-itm"></td>
@@ -48,7 +65,7 @@
                         <td class="queue-itm"></td>
                     </tr>
                 </table>
-                <div class="absolut wh wh2">warehouse2</div>
+                <div class="absolut wh wh2"></div>
                 <table class="absolut queue-tbl" id="wh2-q">
                     <tr>
                         <td class="queue-itm"></td>
@@ -79,9 +96,10 @@
                         <div class="bigbox">
                             <div class="boxe b-rifl"></div>
                             <div class="boxe-desc">
-                                Mat:30 Chem:10<br>
-                                35H
+                                Mat:15 Chem:5<br>
+                                20H
                             </div>
+                            <button class="produce" id="prod-rifl">produce</button>
                         </div>
                         <div class="bigbox">
                             <div class="boxe b-ammo"></div>
@@ -89,6 +107,7 @@
                                 Mat:5 Chem:5<br>
                                 10H
                             </div>
+                            <button class="produce" id="prod-ammo">produce</button>
                         </div>
                         <div class="bigbox">
                             <div class="boxe b-food"></div>
@@ -96,6 +115,7 @@
                                 Mat:5 Bio:10<br>
                                 10H
                             </div>
+                            <button class="produce" id="prod-food">produce</button>
                         </div>
                         <div class="bigbox">
                             <div class="boxe b-heal"></div>
@@ -103,6 +123,23 @@
                                 Mat:5 Chem:15<br>
                                 15H
                             </div>
+                            <button class="produce" id="prod-heal">produce</button>
+                        </div>
+                    </div>
+                    <!-- the selection between rd0 and rd1 -->
+                    <div class="mode-select absolut">
+                        Production mode:<br>
+                        <div id="rd0">RD0</div>
+                        <div id="rd1">RD1</div>
+                        <div class="clearer"></div>
+                        <div class="rd-desc">
+                            x0.75 time<br>
+                            but have cooldown on same item
+                        </div>
+                        <div class="rd-desc">
+                            x1.75 time<br>
+                            x2 resources<br>
+                            produces 2 units at a time
                         </div>
                     </div>
                 </div>

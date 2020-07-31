@@ -15,6 +15,8 @@ div.boxx{
     width: 72vw;
     margin: auto;
     position: relative;
+    background-image: url(Sprites/bg.png);
+    background-size: contain;
 }
 
 canvas#maine{
@@ -44,19 +46,38 @@ canvas#maine{
     line-height: 4vw;
 }
 
+div.vict{
+    font-family: monospace;
+    background-color: #d6b57a;
+    font-size: 1.0vw;
+    height: calc(40vw - 8vw);
+    padding-top: 4vw;
+}
+
+div.toto{
+    float: left;
+    padding: 0.7vw;
+}
+
+div.totot{
+    font-size: 1.5vw;
+    line-height: 12vw;
+    float: left;
+}
+
 /* the factory */
 .factori{
     background-image: url(Sprites/factory.png);
     width: 8vw;
     height: 8vw;
-    left: calc(70vw / 2 - 8vw);
-    top: calc(40.5vw / 2 - 4vw);
+    left: calc(70vw / 2 - 2vw);
+    top: calc(40.5vw / 2 - 9vw);
     background-size: contain;
 }
 
 #factori-q{
-    left: calc(70vw / 2 + 0vw);
-    top: calc(40.5vw / 2 - 1vw);
+    left: calc(70vw / 2 + 6vw);
+    top: calc(40.5vw / 2 - 6vw);
 }
 
 /* the queue items */
@@ -72,26 +93,28 @@ canvas#maine{
 
 /* the warehouse */
 .wh{
-    background-color: black;
     color: white;
-    width: 5vw;
-    height: 5vw;
+    width: 8vw;
+    height: 6.15625vw;
     top: 29vw;
+    background-size: contain;
 }
 
 .wh1{
     left: 20vw;
+    background-image: url("Sprites (UPDATED)/warehouseOne.png");
 }
 .wh2{
     left: 40vw;
+    background-image: url("Sprites (UPDATED)/warehouseTwo.png");
 }
 
 #wh1-q{
-    left: 25.5vw;
+    left: 27.5vw;
     top: 29vw;
 }
 #wh2-q{
-    left: 45.5vw;
+    left: 47.5vw;
     top: 29vw;
 }
 
@@ -172,10 +195,54 @@ div.countr{
     background-image: url("Sprites (UPDATED)/food_Crate.png");
 }
 .b-heal{
-    background-image: url("Sprites%20(UPDATED)/health_Crate.png");
+    background-image: url("Sprites (UPDATED)/health_Crate.png");
 }
 
 .boxe-desc{
     font-family: monospace;
     font-size: 0.9vw;
+}
+
+.produce{
+    background-color: #0000;
+    border: 2px solid #805b1c;
+    color: #422d08;
+    font-size: 1.05vw;
+    font-family: monospace;
+    
+    transition: 0.4s ease;
+}
+
+.produce:hover{
+    color: white;
+    background-color: #805b1c;
+}
+
+.produce:active{
+    background-color: #ba8e41;
+}
+
+/* the mode selection */
+div.mode-select{
+    width: 18vw;
+    height: 8vw;
+    top: 9vw;
+    border: 2px solid black;
+    background-color: #dbb97d;
+    font-family: monospace;
+    font-size: 1.1vw;
+}
+
+#rd0, #rd1{
+    float: left;
+    width: 7.5vw;
+    margin: 0.5vw 0.75vw 0;
+    font-size: 1.25vw;
+}
+
+.rd-desc{
+    float: left;
+    width: 7.5vw;
+    margin: 0 0.75vw;
+    font-size: 0.85vw;
 }
